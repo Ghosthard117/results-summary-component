@@ -1,0 +1,234 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+
+:root {
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  /* background */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+  /* circle */
+  --violet-blue: hsla(256, 72%, 46%, 2);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */;
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h2, h3, p {
+  margin-bottom: 10px;
+  text-wrap: pretty;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.results-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: 0 0 25px 25px;
+  padding: 6% 8%;
+  margin-bottom: 20px;
+}
+
+.results-summary h2, p {
+  color: var(--light-lavender);
+}
+
+.results-summary span, h3 {
+  color: var(--white);
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 15px auto;
+}
+
+.score span {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.score p {
+  font-size: 1rem;
+}
+
+.rest-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 8%;
+  font-size: 1rem;
+}
+
+.rest-summary h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--dark-gray-blue);
+}
+
+.left {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.left span {
+  margin-left: 8px;
+}
+
+.left span, .right p {
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right p {
+  margin: 0;
+}
+
+.right span {
+  font-weight: 800;
+  color: var(--dark-gray-blue);
+}
+
+.area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 5%;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.reaction {
+  color: var(--light-red);
+  background: hsl(0, 100%, 96%);
+}
+
+.memory {
+  color: var(--orangey-yellow);
+  background: hsl(39, 100%, 96%);
+}
+
+.verbal {
+  color: var(--green-teal);
+  background: hsl(166, 100%, 96%);
+}
+
+.visual {
+  color: var(--cobalt-blue);
+  background: hsl(234, 85%, 96%);
+}
+
+.continue-btn {
+  background: var(--dark-gray-blue);
+  color: var(--white);
+  font-size: 18px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 5%;
+  font-weight: 600;
+}
+
+.continue-btn:hover {
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+
+
+@media (max-width: 500px) {
+  body {
+    display: flex;
+    justify-content: start;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 10px -4px var(--light-lavender);
+    -webkit-box-shadow: 0px 8px 10px -4px var(--light-lavender);
+    -moz-box-shadow: 0px 8px 10px -4px var(--light-lavender);
+  }
+
+  .results-summary {
+    border-radius: 25px;
+    width: 40%;
+    margin: 0;
+  }
+
+  .rest-summary {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 15px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
